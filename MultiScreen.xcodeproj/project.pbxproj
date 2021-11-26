@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6F018A8427514CB600B11589 /* 3things.mov in Resources */ = {isa = PBXBuildFile; fileRef = 6F018A8327514CB600B11589 /* 3things.mov */; };
 		6F69B6BF274F3CD3008D538D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F69B6BE274F3CD3008D538D /* AppDelegate.swift */; };
 		6F69B6C1274F3CD3008D538D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F69B6C0274F3CD3008D538D /* SceneDelegate.swift */; };
 		6F69B6C3274F3CD3008D538D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F69B6C2274F3CD3008D538D /* ViewController.swift */; };
@@ -16,6 +17,8 @@
 		6F69B6D6274F3CD4008D538D /* MultiScreenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F69B6D5274F3CD4008D538D /* MultiScreenTests.swift */; };
 		6F69B6E0274F3CD4008D538D /* MultiScreenUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F69B6DF274F3CD4008D538D /* MultiScreenUITests.swift */; };
 		6F69B6E2274F3CD4008D538D /* MultiScreenUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F69B6E1274F3CD4008D538D /* MultiScreenUITestsLaunchTests.swift */; };
+		6F69B6EF274F44C5008D538D /* PhoneSelectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F69B6EE274F44C5008D538D /* PhoneSelectorViewController.swift */; };
+		6F69B6F2274F4C11008D538D /* SPAlert in Frameworks */ = {isa = PBXBuildFile; productRef = 6F69B6F1274F4C11008D538D /* SPAlert */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6F018A8327514CB600B11589 /* 3things.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = 3things.mov; sourceTree = "<group>"; };
 		6F69B6BB274F3CD3008D538D /* MultiScreen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MultiScreen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F69B6BE274F3CD3008D538D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6F69B6C0274F3CD3008D538D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +53,7 @@
 		6F69B6DB274F3CD4008D538D /* MultiScreenUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MultiScreenUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F69B6DF274F3CD4008D538D /* MultiScreenUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiScreenUITests.swift; sourceTree = "<group>"; };
 		6F69B6E1274F3CD4008D538D /* MultiScreenUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiScreenUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		6F69B6EE274F44C5008D538D /* PhoneSelectorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneSelectorViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6F69B6F2274F4C11008D538D /* SPAlert in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,9 +105,11 @@
 		6F69B6BD274F3CD3008D538D /* MultiScreen */ = {
 			isa = PBXGroup;
 			children = (
+				6F018A8327514CB600B11589 /* 3things.mov */,
 				6F69B6BE274F3CD3008D538D /* AppDelegate.swift */,
 				6F69B6C0274F3CD3008D538D /* SceneDelegate.swift */,
 				6F69B6C2274F3CD3008D538D /* ViewController.swift */,
+				6F69B6EE274F44C5008D538D /* PhoneSelectorViewController.swift */,
 				6F69B6C4274F3CD3008D538D /* Main.storyboard */,
 				6F69B6C7274F3CD4008D538D /* Assets.xcassets */,
 				6F69B6C9274F3CD4008D538D /* LaunchScreen.storyboard */,
@@ -143,6 +151,9 @@
 			dependencies = (
 			);
 			name = MultiScreen;
+			packageProductDependencies = (
+				6F69B6F1274F4C11008D538D /* SPAlert */,
+			);
 			productName = MultiScreen;
 			productReference = 6F69B6BB274F3CD3008D538D /* MultiScreen.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +226,9 @@
 				Base,
 			);
 			mainGroup = 6F69B6B2274F3CD3008D538D;
+			packageReferences = (
+				6F69B6F0274F4C11008D538D /* XCRemoteSwiftPackageReference "SPAlert" */,
+			);
 			productRefGroup = 6F69B6BC274F3CD3008D538D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -232,6 +246,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6F69B6CB274F3CD4008D538D /* LaunchScreen.storyboard in Resources */,
+				6F018A8427514CB600B11589 /* 3things.mov in Resources */,
 				6F69B6C8274F3CD4008D538D /* Assets.xcassets in Resources */,
 				6F69B6C6274F3CD3008D538D /* Main.storyboard in Resources */,
 			);
@@ -260,6 +275,7 @@
 			files = (
 				6F69B6C3274F3CD3008D538D /* ViewController.swift in Sources */,
 				6F69B6BF274F3CD3008D538D /* AppDelegate.swift in Sources */,
+				6F69B6EF274F44C5008D538D /* PhoneSelectorViewController.swift in Sources */,
 				6F69B6C1274F3CD3008D538D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -439,14 +455,18 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 99C7B3BEL5;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MultiScreen/Info.plist;
+				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "Display Videos ";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UIStatusBarHidden = NO;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -467,14 +487,18 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 99C7B3BEL5;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MultiScreen/Info.plist;
+				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "Display Videos ";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UIStatusBarHidden = NO;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -624,6 +648,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		6F69B6F0274F4C11008D538D /* XCRemoteSwiftPackageReference "SPAlert" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ivanvorobei/SPAlert";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		6F69B6F1274F4C11008D538D /* SPAlert */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6F69B6F0274F4C11008D538D /* XCRemoteSwiftPackageReference "SPAlert" */;
+			productName = SPAlert;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 6F69B6B3274F3CD3008D538D /* Project object */;
 }

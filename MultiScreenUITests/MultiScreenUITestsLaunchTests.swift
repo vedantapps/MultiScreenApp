@@ -2,7 +2,7 @@
 //  MultiScreenUITestsLaunchTests.swift
 //  MultiScreenUITests
 //
-//  Created by Vedant Malhotra on 11/24/21.
+//  Created by vedantapps on 11/24/21.
 //
 
 import XCTest

@@ -1,24 +1,299 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jki-A3-zeq">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Navigation Controller-->
+        <scene sceneID="jhL-gT-P6c">
+            <objects>
+                <navigationController storyboardIdentifier="mainView" id="tDv-7u-3Xf" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="Qia-sp-rSu">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Xkh-yi-Y8I"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KWs-5t-kO4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1325" y="124"/>
+        </scene>
+        <!--MultiScreen-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MultiScreen" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AAa-5a-crx">
+                                <rect key="frame" x="16" y="109" width="343" height="383"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="90"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mlu-WV-eFc">
+                                <rect key="frame" x="85" y="524" width="205" height="47"/>
+                                <color key="backgroundColor" red="0.27629612660000002" green="0.57416888610000005" blue="0.91980725529999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="47" id="CsU-Yl-tcX"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Join Session">
+                                    <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="20"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="join:" destination="BYZ-38-t0r" eventType="touchUpInside" id="T5p-c2-7vv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KtW-gq-uzl">
+                                <rect key="frame" x="85" y="600" width="205" height="47"/>
+                                <color key="backgroundColor" red="0.27629612660000002" green="0.57416888610000005" blue="0.91980725529999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="47" id="p7F-fP-nmh"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Host Session">
+                                    <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="20"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="host:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mIZ-aH-lKU"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="KtW-gq-uzl" secondAttribute="bottom" constant="20" symbolic="YES" id="3Ll-hc-yx0"/>
+                            <constraint firstItem="mlu-WV-eFc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="85" id="EwL-jF-YpZ"/>
+                            <constraint firstItem="AAa-5a-crx" firstAttribute="centerX" secondItem="mlu-WV-eFc" secondAttribute="centerX" id="G3a-yv-GtF"/>
+                            <constraint firstItem="mlu-WV-eFc" firstAttribute="leading" secondItem="KtW-gq-uzl" secondAttribute="leading" id="Hia-YJ-3zM"/>
+                            <constraint firstItem="mlu-WV-eFc" firstAttribute="top" secondItem="AAa-5a-crx" secondAttribute="bottom" constant="32" id="V1w-ud-ntF"/>
+                            <constraint firstItem="AAa-5a-crx" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="hKM-eh-okc"/>
+                            <constraint firstItem="KtW-gq-uzl" firstAttribute="top" secondItem="mlu-WV-eFc" secondAttribute="bottom" constant="29" id="heC-lv-Mgm"/>
+                            <constraint firstItem="AAa-5a-crx" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="13" id="ieR-Jx-KIp"/>
+                            <constraint firstItem="mlu-WV-eFc" firstAttribute="trailing" secondItem="KtW-gq-uzl" secondAttribute="trailing" id="qR4-2N-JKO"/>
+                            <constraint firstItem="AAa-5a-crx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="u0Q-Ku-oVy"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="MultiScreen" id="hnY-Z5-Tt1">
+                        <barButtonItem key="leftBarButtonItem" enabled="NO" title="Stop" image="stop.circle.fill" catalog="system" id="EIW-ac-tgm">
+                            <connections>
+                                <action selector="stop:" destination="BYZ-38-t0r" id="EQb-At-7mI"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" enabled="NO" title="Start" image="play.circle.fill" catalog="system" id="ssd-vh-Sca">
+                            <connections>
+                                <action selector="start:" destination="BYZ-38-t0r" id="c6r-2w-B3j"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="deviceLabel" destination="AAa-5a-crx" id="TGI-KH-1c6"/>
+                        <outlet property="hostSessionOutlet" destination="KtW-gq-uzl" id="K6G-65-qvB"/>
+                        <outlet property="joinSessionOutlet" destination="mlu-WV-eFc" id="Fce-R7-YSC"/>
+                        <outlet property="startSession" destination="ssd-vh-Sca" id="sqx-k3-59T"/>
+                        <outlet property="stopOutlet" destination="EIW-ac-tgm" id="yKz-3R-yX0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-666" y="124"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="xXE-bZ-16n">
+            <objects>
+                <navigationController id="jki-A3-zeq" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="Vhr-SS-Hyr">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="LaH-zR-gf3" kind="relationship" relationship="rootViewController" id="YWh-Sy-E62"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WBb-fY-bpA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1326" y="-547"/>
+        </scene>
+        <!--Setup-->
+        <scene sceneID="mu7-i5-BCq">
+            <objects>
+                <viewController id="LaH-zR-gf3" customClass="PhoneSelectorViewController" customModule="MultiScreen" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IdD-98-TlB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jK5-uG-CTV">
+                                <rect key="frame" x="16" y="205" width="343" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="41" id="Gbn-lI-yTz"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="iPhone 1">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
+                                    <color key="baseBackgroundColor" systemColor="linkColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="iPhoneOne:" destination="LaH-zR-gf3" eventType="touchUpInside" id="Fzp-OM-bvp"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yw9-wU-SE3">
+                                <rect key="frame" x="16" y="254" width="343" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="41" id="7ok-Gx-574"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="iPhone 2">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
+                                    <color key="baseBackgroundColor" systemColor="linkColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="iPhoneTwo:" destination="LaH-zR-gf3" eventType="touchUpInside" id="r5q-KA-Qjw"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vYO-so-isG">
+                                <rect key="frame" x="16" y="303" width="343" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="41" id="IYu-bh-B9w"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="iPhone 3">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
+                                    <color key="baseBackgroundColor" systemColor="linkColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="iPhoneThree:" destination="LaH-zR-gf3" eventType="touchUpInside" id="Qac-KG-2c0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="paq-8y-00u">
+                                <rect key="frame" x="16" y="352" width="343" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="41" id="0my-Px-JPC"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="iPhone 4">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
+                                    <color key="baseBackgroundColor" systemColor="linkColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="iPhoneFour:" destination="LaH-zR-gf3" eventType="touchUpInside" id="VDw-AD-oIs"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kai-AH-ZYU">
+                                <rect key="frame" x="16" y="401" width="343" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="41" id="30X-cW-x8Y"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="iPhone 5">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
+                                    <color key="baseBackgroundColor" systemColor="linkColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="iPhoneFive:" destination="LaH-zR-gf3" eventType="touchUpInside" id="gqD-rp-BFl"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Which iPhone is this?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VbM-mq-QQf">
+                                <rect key="frame" x="16" y="96" width="343" height="65"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Abh-Ue-e2I">
+                                <rect key="frame" x="16" y="450" width="343" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="41" id="bQS-1P-D6D"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="iPhone 6">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
+                                    <color key="baseBackgroundColor" systemColor="linkColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="iPhoneSix:" destination="LaH-zR-gf3" eventType="touchUpInside" id="X9v-ee-Ez5"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Use &quot;Main iPhone&quot; to host a session" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9PG-DW-6Kq">
+                                <rect key="frame" x="16" y="499" width="343" height="67"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dSL-SR-EbH">
+                                <rect key="frame" x="16" y="156" width="343" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="41" id="HUT-eD-daS"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Main iPhone">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
+                                    <color key="baseBackgroundColor" systemColor="linkColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="iPhoneOne:" destination="LaH-zR-gf3" eventType="touchUpInside" id="QzZ-ro-5Wb"/>
+                                    <action selector="mainiPhone:" destination="LaH-zR-gf3" eventType="touchUpInside" id="d5e-yq-uEn"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="uPb-yp-QBL"/>
+                        <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="kai-AH-ZYU" firstAttribute="leading" secondItem="Abh-Ue-e2I" secondAttribute="leading" id="3Cn-1c-frt"/>
+                            <constraint firstItem="VbM-mq-QQf" firstAttribute="leading" secondItem="dSL-SR-EbH" secondAttribute="leading" id="3OB-o3-6lx"/>
+                            <constraint firstItem="kai-AH-ZYU" firstAttribute="top" secondItem="paq-8y-00u" secondAttribute="bottom" constant="8" symbolic="YES" id="3lh-I1-znF"/>
+                            <constraint firstItem="uPb-yp-QBL" firstAttribute="bottom" secondItem="9PG-DW-6Kq" secondAttribute="bottom" constant="101" id="4YX-UU-0G0"/>
+                            <constraint firstItem="yw9-wU-SE3" firstAttribute="leading" secondItem="vYO-so-isG" secondAttribute="leading" id="4q2-e4-I0Y"/>
+                            <constraint firstItem="vYO-so-isG" firstAttribute="leading" secondItem="paq-8y-00u" secondAttribute="leading" id="5UF-fX-QCT"/>
+                            <constraint firstItem="vYO-so-isG" firstAttribute="top" secondItem="yw9-wU-SE3" secondAttribute="bottom" constant="8" symbolic="YES" id="6Ve-dN-9He"/>
+                            <constraint firstItem="kai-AH-ZYU" firstAttribute="trailing" secondItem="Abh-Ue-e2I" secondAttribute="trailing" id="6sq-e5-IpW"/>
+                            <constraint firstItem="jK5-uG-CTV" firstAttribute="trailing" secondItem="yw9-wU-SE3" secondAttribute="trailing" id="7Gg-lM-gQZ"/>
+                            <constraint firstItem="vYO-so-isG" firstAttribute="trailing" secondItem="paq-8y-00u" secondAttribute="trailing" id="7lo-xD-ZvG"/>
+                            <constraint firstItem="VbM-mq-QQf" firstAttribute="trailing" secondItem="dSL-SR-EbH" secondAttribute="trailing" id="8oh-cS-6Cq"/>
+                            <constraint firstItem="Abh-Ue-e2I" firstAttribute="leading" secondItem="9PG-DW-6Kq" secondAttribute="leading" id="ETF-z5-Out"/>
+                            <constraint firstItem="dSL-SR-EbH" firstAttribute="trailing" secondItem="jK5-uG-CTV" secondAttribute="trailing" id="G6q-z6-1dl"/>
+                            <constraint firstItem="dSL-SR-EbH" firstAttribute="leading" secondItem="jK5-uG-CTV" secondAttribute="leading" id="JdI-EK-P01"/>
+                            <constraint firstItem="VbM-mq-QQf" firstAttribute="top" secondItem="uPb-yp-QBL" secondAttribute="top" id="Lsg-ua-SpF"/>
+                            <constraint firstItem="yw9-wU-SE3" firstAttribute="trailing" secondItem="vYO-so-isG" secondAttribute="trailing" id="MFr-WF-rUX"/>
+                            <constraint firstItem="9PG-DW-6Kq" firstAttribute="top" secondItem="Abh-Ue-e2I" secondAttribute="bottom" constant="8" symbolic="YES" id="MO2-La-u31"/>
+                            <constraint firstItem="yw9-wU-SE3" firstAttribute="top" secondItem="jK5-uG-CTV" secondAttribute="bottom" constant="8" symbolic="YES" id="P9H-1I-PIO"/>
+                            <constraint firstItem="jK5-uG-CTV" firstAttribute="top" secondItem="VbM-mq-QQf" secondAttribute="bottom" constant="44" id="Qmc-R5-gDB"/>
+                            <constraint firstItem="paq-8y-00u" firstAttribute="leading" secondItem="kai-AH-ZYU" secondAttribute="leading" id="T6g-xB-eVG"/>
+                            <constraint firstItem="VbM-mq-QQf" firstAttribute="trailing" secondItem="IdD-98-TlB" secondAttribute="trailingMargin" id="Wj9-Hx-5wz"/>
+                            <constraint firstItem="jK5-uG-CTV" firstAttribute="top" secondItem="dSL-SR-EbH" secondAttribute="bottom" constant="8" symbolic="YES" id="XNU-wk-p76"/>
+                            <constraint firstItem="jK5-uG-CTV" firstAttribute="leading" secondItem="yw9-wU-SE3" secondAttribute="leading" id="cPW-3m-GyG"/>
+                            <constraint firstItem="paq-8y-00u" firstAttribute="trailing" secondItem="kai-AH-ZYU" secondAttribute="trailing" id="eki-jT-bbK"/>
+                            <constraint firstItem="dSL-SR-EbH" firstAttribute="top" secondItem="uPb-yp-QBL" secondAttribute="top" constant="60" id="mMT-3j-aL2"/>
+                            <constraint firstItem="Abh-Ue-e2I" firstAttribute="trailing" secondItem="9PG-DW-6Kq" secondAttribute="trailing" id="nvh-oI-YZ0"/>
+                            <constraint firstItem="VbM-mq-QQf" firstAttribute="leading" secondItem="IdD-98-TlB" secondAttribute="leadingMargin" id="r3R-Ap-fsP"/>
+                            <constraint firstItem="paq-8y-00u" firstAttribute="top" secondItem="vYO-so-isG" secondAttribute="bottom" constant="8" symbolic="YES" id="tZY-G0-VEb"/>
+                            <constraint firstItem="Abh-Ue-e2I" firstAttribute="top" secondItem="kai-AH-ZYU" secondAttribute="bottom" constant="8" symbolic="YES" id="zXL-Ye-4Qd"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Setup" largeTitleDisplayMode="always" id="zfg-EF-t42"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xcm-k6-cjx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-666" y="-548"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="play.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="stop.circle.fill" catalog="system" width="128" height="121"/>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGroupedBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
