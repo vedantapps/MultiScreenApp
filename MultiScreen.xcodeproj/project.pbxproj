@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		6F018A8427514CB600B11589 /* 3things.mov in Resources */ = {isa = PBXBuildFile; fileRef = 6F018A8327514CB600B11589 /* 3things.mov */; };
+		6F018A8627515DB100B11589 /* Images in Resources */ = {isa = PBXBuildFile; fileRef = 6F018A8527515DB100B11589 /* Images */; };
 		6F69B6BF274F3CD3008D538D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F69B6BE274F3CD3008D538D /* AppDelegate.swift */; };
 		6F69B6C1274F3CD3008D538D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F69B6C0274F3CD3008D538D /* SceneDelegate.swift */; };
 		6F69B6C3274F3CD3008D538D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F69B6C2274F3CD3008D538D /* ViewController.swift */; };
@@ -40,6 +41,7 @@
 
 /* Begin PBXFileReference section */
 		6F018A8327514CB600B11589 /* 3things.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = 3things.mov; sourceTree = "<group>"; };
+		6F018A8527515DB100B11589 /* Images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Images; sourceTree = "<group>"; };
 		6F69B6BB274F3CD3008D538D /* MultiScreen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MultiScreen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F69B6BE274F3CD3008D538D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6F69B6C0274F3CD3008D538D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 		6F69B6B2274F3CD3008D538D = {
 			isa = PBXGroup;
 			children = (
+				6F018A8527515DB100B11589 /* Images */,
 				6F69B6BD274F3CD3008D538D /* MultiScreen */,
 				6F69B6D4274F3CD4008D538D /* MultiScreenTests */,
 				6F69B6DE274F3CD4008D538D /* MultiScreenUITests */,
@@ -245,6 +248,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6F018A8627515DB100B11589 /* Images in Resources */,
 				6F69B6CB274F3CD4008D538D /* LaunchScreen.storyboard in Resources */,
 				6F018A8427514CB600B11589 /* 3things.mov in Resources */,
 				6F69B6C8274F3CD4008D538D /* Assets.xcassets in Resources */,
