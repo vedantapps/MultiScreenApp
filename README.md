@@ -7,6 +7,10 @@ An app that uses Multipeer Connectivity to play a video across 6 different iOS s
 - Each of the 6 phones has the same video file saved locally, and once they receive the play command, they each play 1/6 of the video, respective of their position.
 - Using Multipeer Connectivity allows for offline usage. 
 
+## Demo of the app
+- https://twitter.com/vedantapps/status/1463984620425265183?s=21
+
+## Screenshots 
 <p float="left">
   <img src="Images/Main.PNG" height="500">  
   <img src="Images/Session.PNG" height="500"> 
